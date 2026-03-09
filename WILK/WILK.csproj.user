@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\leons\Desktop\gitDow\WILK\WILK\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Controls\DropDownButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Views\AdditionalMaterialView\AdditionalMaterialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\AlternativeAddView\AlternativeAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\CreateAdditionalMaterialView\CreateAdditionalMaterialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\CreateReservationListView\CreateReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\CreateReservationSingleView\CreateReservationSingle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\EditReservationList\EditReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\MultipleListsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\THTUpdateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\WarmUpAddView\WarmUpAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

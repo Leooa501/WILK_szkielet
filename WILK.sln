@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WILK", "WILK\WILK.csproj", "{4620F5DF-05C3-4BC4-9879-A62795B60806}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		THT|Any CPU = THT|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4620F5DF-05C3-4BC4-9879-A62795B60806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4620F5DF-05C3-4BC4-9879-A62795B60806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4620F5DF-05C3-4BC4-9879-A62795B60806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4620F5DF-05C3-4BC4-9879-A62795B60806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4620F5DF-05C3-4BC4-9879-A62795B60806}.THT|Any CPU.ActiveCfg = THT|Any CPU
+		{4620F5DF-05C3-4BC4-9879-A62795B60806}.THT|Any CPU.Build.0 = THT|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F807D3A-B4A2-4D4E-8651-7FEC67BA28A7}
+	EndGlobalSection
+EndGlobal

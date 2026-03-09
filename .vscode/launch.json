@@ -1,0 +1,62 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-debug",
+            "program": "${workspaceFolder}/WILK/bin/Debug/net8.0-windows/WILK.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/WILK",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "justMyCode": false,
+            "symbolOptions": {
+                "searchPaths": [
+                    "${workspaceFolder}/WILK/bin/Debug/net8.0-windows"
+                ],
+                "searchMicrosoftSymbolServer": true
+            }
+        },
+        {
+            "name": ".NET Release",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-release",
+            "program": "${workspaceFolder}/WILK/bin/Release/net8.0-windows/WILK.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/WILK",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "justMyCode": false,
+            "symbolOptions": {
+                "searchPaths": [
+                    "${workspaceFolder}/WILK/bin/Release/net8.0-windows"
+                ],
+                "searchMicrosoftSymbolServer": true
+            }
+        },
+        {
+            "name": ".NET THT",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-tht",
+            "program": "${workspaceFolder}/WILK/bin/THT/net8.0-windows/WILK.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/WILK",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "justMyCode": false,
+            "symbolOptions": {
+                "searchPaths": [
+                    "${workspaceFolder}/WILK/bin/THT/net8.0-windows"
+                ],
+                "searchMicrosoftSymbolServer": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,240 @@
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\appsettings.json
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Symulacja Produkcji.exe
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Symulacja Produkcji.deps.json
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Symulacja Produkcji.runtimeconfig.json
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Symulacja Produkcji.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Symulacja Produkcji.pdb
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\AWSSDK.Core.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\AWSSDK.SecurityToken.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\DnsClient.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\ExcelDataReader.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\ExcelDataReader.DataSet.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\MongoDB.Bson.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\MongoDB.Driver.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\MongoDB.Driver.Core.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\MongoDB.Libmongocrypt.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\RBush.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\SharpCompress.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\Snappier.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\System.IO.Packaging.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\runtimes\linux\native\libmongocrypt.so
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\runtimes\win\native\mongocrypt.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\bin\Debug\net8.0-windows\MProductionStorageLib.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja Produkcji.csproj.AssemblyReference.cache
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja_Produkcji.Views.AlternativeAddForm.resources
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja_Produkcji.Views.CreateReservationList.resources
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja_Produkcji.Views.CreateReservationSingle.resources
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja_Produkcji.Views.EditReservationList.resources
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja_Produkcji.Views.MainForm.resources
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja_Produkcji.Views.WarmUpAddForm.resources
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja Produkcji.csproj.GenerateResource.cache
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja Produkcji.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja Produkcji.AssemblyInfoInputs.cache
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja Produkcji.AssemblyInfo.cs
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja Produkcji.csproj.CoreCompileInputs.cache
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja Produkcji.sourcelink.json
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacj.CECCFFF8.Up2Date
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja Produkcji.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\refint\Symulacja Produkcji.dll
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja Produkcji.pdb
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\Symulacja Produkcji.genruntimeconfig.cache
+C:\Users\leons\Desktop\gitDow\Symulacja-Produkcji\Symulacja Produkcji\obj\Debug\net8.0-windows\ref\Symulacja Produkcji.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\appsettings.json
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\WILK.exe
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\WILK.deps.json
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\WILK.runtimeconfig.json
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\WILK.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\WILK.pdb
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\AWSSDK.Core.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\AWSSDK.SecurityToken.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\DnsClient.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\ExcelDataReader.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\ExcelDataReader.DataSet.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\MongoDB.Bson.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\MongoDB.Driver.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\MongoDB.Driver.Core.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\MongoDB.Libmongocrypt.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\RBush.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\SharpCompress.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\Snappier.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\System.IO.Packaging.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\runtimes\linux\native\libmongocrypt.so
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\runtimes\win\native\mongocrypt.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\bin\Debug\net8.0-windows\MProductionStorageLib.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.csproj.AssemblyReference.cache
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.Views.AlternativeAddForm.resources
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.Views.CreateReservationList.resources
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.Views.CreateReservationSingle.resources
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.Views.EditReservationList.resources
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.Views.MainForm.resources
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.Views.WarmUpAddForm.resources
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.csproj.GenerateResource.cache
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.AssemblyInfoInputs.cache
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.AssemblyInfo.cs
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.csproj.CoreCompileInputs.cache
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.sourcelink.json
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.csproj.Up2Date
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\refint\WILK.dll
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.pdb
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\WILK.genruntimeconfig.cache
+C:\Users\leons\Desktop\gitDow\WILK\WILK\obj\Debug\net8.0-windows\ref\WILK.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\appsettings.json
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\WILK.exe
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\WILK.deps.json
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\WILK.runtimeconfig.json
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\WILK.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\WILK.pdb
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\AWSSDK.Core.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\AWSSDK.SecurityToken.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\DnsClient.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\ExcelDataReader.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\ExcelDataReader.DataSet.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\MongoDB.Bson.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\MongoDB.Driver.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\MongoDB.Driver.Core.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\MongoDB.Libmongocrypt.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\RBush.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\SharpCompress.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\Snappier.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\System.IO.Packaging.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\runtimes\linux\native\libmongocrypt.so
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\runtimes\win\native\mongocrypt.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Debug\net8.0-windows\MProductionStorageLib.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.csproj.AssemblyReference.cache
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.Views.AlternativeAddForm.resources
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.Views.CreateReservationList.resources
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.Views.CreateReservationSingle.resources
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.Views.EditReservationList.resources
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.Views.MainForm.resources
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.Views.WarmUpAddForm.resources
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.csproj.GenerateResource.cache
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.AssemblyInfoInputs.cache
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.AssemblyInfo.cs
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.csproj.CoreCompileInputs.cache
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.sourcelink.json
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.csproj.Up2Date
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\refint\WILK.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.pdb
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\WILK.genruntimeconfig.cache
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Debug\net8.0-windows\ref\WILK.dll

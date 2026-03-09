@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-debug",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/WILK/WILK.csproj",
+                "-c",
+                "Debug"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/WILK/WILK.csproj",
+                "-c",
+                "Release"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-tht",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/WILK/WILK.csproj",
+                "-c",
+                "THT"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
