@@ -88,12 +88,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT r.id, c.r_id, c.name, r.quantity
-                        FROM Reservations r
-                        JOIN Components c ON c.id = r.components_id
-                        WHERE r.list_id IS NULL
-                        ORDER BY r.id DESC;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     using var adapter = new MySqlDataAdapter(command);
@@ -116,12 +111,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT r.id, c.r_id, c.name, r.quantity
-                        FROM ReservationsTHT r
-                        JOIN Components c ON c.id = r.components_id
-                        WHERE r.list_id = @listId
-                        ORDER BY r.id DESC;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@listId", listId);
@@ -145,12 +135,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT id, `name`, start, done_top, done_bot, last_update_done_top, last_update_done_bot, is_one_sided,
-                               COALESCE(createdAt, NOW()) as created_at
-                        FROM ListOfReservations 
-                        WHERE status = @status 
-                        ORDER BY id DESC;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@status", ListStatusConstants.ZAREZERWOWANE);
@@ -173,10 +158,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"SELECT `done_top`, `done_bot`, `start` 
-                                        FROM ListOfReservations 
-                                        WHERE id = @id 
-                                        LIMIT 1;";
+                    const string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@id", reservationId);
@@ -208,18 +190,14 @@ namespace WILK.Services.Repositories
                     
                     var sideStr = side == IReservationRepository.Side.TOP ? "top" : "bot";
                     // Get current 'done' value to store as last update
-                    string selectSql = @"SELECT done_" + sideStr + @"
-                                            FROM ListOfReservations 
-                                            WHERE id = @id;";
+                    string selectSql = @"e";
 
                     using var selectCommand = new MySqlCommand(selectSql, connection);
                     selectCommand.Parameters.AddWithValue("@id", reservationId);
                     var currentDone = selectCommand.ExecuteScalar();
 
                     // Update progress and auto-complete when done >= start
-                    string updateSql = @"UPDATE ListOfReservations 
-                                            SET done_" + sideStr + @" = @newDone, last_update_done_" + sideStr + @" = @lastUpdate
-                                            WHERE id = @id;";
+                    string updateSql = @"e";
 
                     using var updateCommand = new MySqlCommand(updateSql, connection);
                     updateCommand.Parameters.AddWithValue("@id", reservationId);
@@ -230,9 +208,7 @@ namespace WILK.Services.Repositories
 
                     if (side.Equals(IReservationRepository.Side.SINGLE))
                     {
-                        updateSql = @"UPDATE ListOfReservations 
-                                            SET done_top = @newDone, last_update_done_top = @lastUpdate
-                                            WHERE id = @id;";
+                        updateSql = @"e";
 
                         using var updateCommand2 = new MySqlCommand(updateSql, connection);
                         updateCommand2.Parameters.AddWithValue("@id", reservationId);
@@ -242,12 +218,7 @@ namespace WILK.Services.Repositories
                         updateCommand2.ExecuteNonQuery();
                     }
 
-                    string updateStatusSql = @"
-                        UPDATE ListOfReservations
-                        SET status = @status, updatedAt = NOW()
-                        WHERE id = @id
-                          AND done_top >= start
-                          AND done_bot >= start;";
+                    string updateStatusSql = @"e";
 
                     using var statusCommand = new MySqlCommand(updateStatusSql, connection);
                     statusCommand.Parameters.AddWithValue("@status", ListStatusConstants.ZREALIZOWANESMT);
@@ -274,16 +245,10 @@ namespace WILK.Services.Repositories
                 {
                     // Create production list in appropriate table (SMD or THT)
                     var tableName = isTHT ? "ListOfReservationsTHT" : "ListOfReservations";
-                    var createListSql = $@"INSERT INTO {tableName} 
-                                        (name, done_top, done_bot, start, status, last_update_done_top, last_update_done_bot, is_one_sided) 
-                                        VALUES (@name, 0, 0, @start, @status, 0, 0, @isOneSided);
-                                        SELECT LAST_INSERT_ID();";
+                    var createListSql = $@"e";
                     if(isTHT)
                     {
-                        createListSql = $@"INSERT INTO {tableName} 
-                                        (name, done, start, status, smd_list_id) 
-                                        VALUES (@name, 0, @start, @status, @smdListId);
-                                        SELECT LAST_INSERT_ID();";
+                        createListSql = $@"e";
                     }
                     
                     using var createListCommand = new MySqlCommand(createListSql, connection, transaction);
@@ -326,10 +291,7 @@ namespace WILK.Services.Repositories
                 
                 try
                 {                    
-                    const string selectListSql = @"SELECT start
-                                                FROM ListOfReservations 
-                                                WHERE id = @id 
-                                                LIMIT 1;";
+                    const string selectListSql = @"e";
                     using var selectListCommand = new MySqlCommand(selectListSql, connection, transaction);
                     selectListCommand.Parameters.AddWithValue("@id", listId);
                     var startObj = selectListCommand.ExecuteScalar();
@@ -340,14 +302,7 @@ namespace WILK.Services.Repositories
                     int start = Convert.ToInt32(startObj);
 
                     // Add component reservations linked to this list
-                    const string insertReservationSql = @"
-                                                        INSERT INTO Reservations 
-                                                        (components_id, quantity, list_id, side) 
-                                                        VALUES ((SELECT id 
-                                                                FROM Components 
-                                                                WHERE r_id = @r_id 
-                                                                LIMIT 1), 
-                                                        @quantity, @listId, @side);";
+                    const string insertReservationSql = @"e";
                     
                     foreach (var (kolName, kolId, kolQuantity) in dane)
                     {
@@ -386,10 +341,7 @@ namespace WILK.Services.Repositories
                 
                 try
                 {                    
-                    const string selectListSql = @"SELECT start
-                                                FROM ListOfReservationsTHT
-                                                WHERE id = @id 
-                                                LIMIT 1;";
+                    const string selectListSql = @"e";
                     using var selectListCommand = new MySqlCommand(selectListSql, connection, transaction);
                     selectListCommand.Parameters.AddWithValue("@id", listId);
                     var startObj = selectListCommand.ExecuteScalar();
@@ -400,14 +352,7 @@ namespace WILK.Services.Repositories
                     int start = Convert.ToInt32(startObj);
 
                     // Add component reservations linked to this list
-                    const string insertReservationSql = @"
-                                                        INSERT INTO ReservationsTHT
-                                                        (components_id, quantity, list_id) 
-                                                        VALUES ((SELECT id 
-                                                                FROM Components 
-                                                                WHERE r_id = @r_id 
-                                                                LIMIT 1), 
-                                                        @quantity, @listId);";
+                    const string insertReservationSql = @"e";
 
                     var componentParts = new Dictionary<int, (int r_id, int partQuantity, int totalQuantity)>();
                     // Pobranie danych z tabeli ComponentParts do słownika dla szybkiego dostępu
@@ -463,14 +408,7 @@ namespace WILK.Services.Repositories
             try
             {
                 using var connection = await CreateConnectionAsync();
-                const string sql = @"
-                                INSERT INTO Reservations 
-                                (components_id, quantity, side)
-                                VALUES ((SELECT id 
-                                        FROM Components 
-                                        WHERE r_id = @r_id 
-                                        LIMIT 1), 
-                                @quantity, 'NONE');";
+                const string sql = @"e";
                 
                 using var command = new MySqlCommand(sql, connection);
                 command.Parameters.AddWithValue("@r_id", r_id);
@@ -497,15 +435,13 @@ namespace WILK.Services.Repositories
                     {
                         if (selected.IsList)
                         {
-                            const string deleteReservationsSql = @"DELETE FROM Reservations 
-                                                                WHERE list_id = @id;";
+                            const string deleteReservationsSql = @"e";
 
                             using var deleteReservationsCommand = new MySqlCommand(deleteReservationsSql, connection, transaction);
                             deleteReservationsCommand.Parameters.AddWithValue("@id", selected.Id);
                             deleteReservationsCommand.ExecuteNonQuery();
                             
-                            const string deleteListSql = @"DELETE FROM ListOfReservations 
-                                                        WHERE id = @id;";
+                            const string deleteListSql = @"e";
 
                             using var deleteListCommand = new MySqlCommand(deleteListSql, connection, transaction);
                             deleteListCommand.Parameters.AddWithValue("@id", selected.Id);
@@ -513,8 +449,7 @@ namespace WILK.Services.Repositories
                         }
                         else
                         {
-                            const string sql = @"DELETE FROM Reservations 
-                                            WHERE id = @id;";
+                            const string sql = @"e";
 
                             using var command = new MySqlCommand(sql, connection, transaction);
                             command.Parameters.AddWithValue("@id", selected.Id);
@@ -554,10 +489,7 @@ namespace WILK.Services.Repositories
                         {
                             if (currentListId == 0 || row.listName != lastListName)
                             {
-                                const string insertListQuery = @"
-                                    INSERT INTO ListOfReservations (name, done, start, status)
-                                    VALUES (@name, 0, @start, @status);
-                                    SELECT LAST_INSERT_ID();";
+                                const string insertListQuery = @"e";
 
                                 using var cmd = new MySqlCommand(insertListQuery, connection, transaction);
                                 cmd.Parameters.AddWithValue("@name", row.listName);
@@ -568,11 +500,7 @@ namespace WILK.Services.Repositories
                                 lastListName = row.listName;
                             }
 
-                            const string insertComponentQuery = @"
-                                INSERT INTO Components (r_id, name, type, quantity)
-                                VALUES (@r_id, @name, 'Brak', 0)
-                                ON DUPLICATE KEY UPDATE name=@name;
-                                SELECT id FROM Components WHERE r_id=@r_id;";
+                            const string insertComponentQuery = @"e";
 
                             long componentIdInDb;
                             using (var cmd = new MySqlCommand(insertComponentQuery, connection, transaction))
@@ -616,10 +544,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     // Cjheck if the list is one-sided
-                    const string selectList = @"SELECT is_one_sided
-                                                FROM ListOfReservations 
-                                                WHERE id = @id 
-                                                LIMIT 1;";
+                    const string selectList = @"e";
 
                     using var connectionCheck = CreateConnection();
                     using var commandCheck = new MySqlCommand(selectList, connectionCheck);
@@ -637,20 +562,12 @@ namespace WILK.Services.Repositories
                         using var connectionBoth = CreateConnection();
 
                         // Insert top-side change log
-                        string sqlLogTop = @"
-                            INSERT INTO ReservationsLogs (`list_id`, `side`, `change`, `date`)
-                            SELECT @reservationId, 'SINGLE', last_update_done_top - done_top, NOW()
-                            FROM ListOfReservations
-                            WHERE id = @reservationId;";
+                        string sqlLogTop = @"e";
                         using var commandLogTop = new MySqlCommand(sqlLogTop, connectionBoth);
                         commandLogTop.Parameters.AddWithValue("@reservationId", reservationId);
                         commandLogTop.ExecuteNonQuery();
 
-                        string sqlBoth = $@"UPDATE ListOfReservations 
-                                        SET done_top = last_update_done_top, 
-                                            done_bot = last_update_done_bot, 
-                                            updatedAt = NOW()
-                                        WHERE id = @id;";
+                        string sqlBoth = $@"e";
                         using var commandBoth = new MySqlCommand(sqlBoth, connectionBoth);
                         commandBoth.Parameters.AddWithValue("@id", reservationId);
                         commandBoth.ExecuteNonQuery();
@@ -663,8 +580,7 @@ namespace WILK.Services.Repositories
 
                     using var connection = CreateConnection();
 
-                    string sqlLogsSingle = @"
-                        INSERT INTO ReservationsLogs (`list_id`, `side`, `change`, `date`) VALUES (@reservationId, @side, (SELECT last_update_done_" + sideStr + " - done_" + sideStr + @" FROM ListOfReservations WHERE id = @reservationId), NOW());";
+                    string sqlLogsSingle = @"e";
                     using var commandLogsSingle = new MySqlCommand(sqlLogsSingle, connection);
                     commandLogsSingle.Parameters.AddWithValue("@reservationId", reservationId);
                     commandLogsSingle.Parameters.AddWithValue("@side", sideStr);
@@ -693,10 +609,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"SELECT c.name, c.type, c.r_id AS elementId, r.quantity
-                                    FROM Reservations r
-                                    LEFT JOIN Components c ON r.components_id = c.id
-                                    WHERE r.list_id = @ListId;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@ListId", listId);
@@ -737,10 +650,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"SELECT c.name, c.type, c.r_id AS elementId, r.quantity
-                                    FROM ReservationsTHT r
-                                    LEFT JOIN Components c ON r.components_id = c.id
-                                    WHERE r.list_id = @ListId;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@ListId", listId);
@@ -781,9 +691,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connectionCheck = CreateConnection();
-                    const string checkSql = @"SELECT components_id, side
-                                            FROM Reservations r
-                                            WHERE list_id = @ListId;";
+                    const string checkSql = @"e";
                     using var checkCommand = new MySqlCommand(checkSql, connectionCheck);
                     checkCommand.Parameters.AddWithValue("@ListId", listId);
                     using var reader = checkCommand.ExecuteReader();
@@ -797,7 +705,7 @@ namespace WILK.Services.Repositories
                     reader.Close();
 
                     using var connection = CreateConnection();
-                    string sql = "DELETE FROM Reservations WHERE list_id = @ListId;";                    
+                    string sql = "e";                    
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@ListId", listId);
 
@@ -830,7 +738,7 @@ namespace WILK.Services.Repositories
                     result.Columns.Add("using_quantity", typeof(int));
 
                     using var connection = CreateConnection();
-                    string sql = "SELECT r.id, c.name, c.r_id, r.quantity, r.have_alternative, r.using_quantity FROM Reservations r JOIN Components c ON r.components_id = c.id WHERE list_id = @ListId;";
+                    string sql = "e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@ListId", listId);
@@ -842,7 +750,7 @@ namespace WILK.Services.Repositories
                         if(have_alternative.HasValue && have_alternative.Value == true)
                         {
                             // Get alternative component details
-                            string altSql = "SELECT rs.id, rs.substitute_id, rs.quantity, rs.reservation_id, c.name, c.r_id FROM ReservationSubstitute rs JOIN Substitute s ON s.id = rs.substitute_id JOIN Components c ON s.z_id = c.id WHERE reservation_id = @reservationId;";
+                            string altSql = "e";
                             using var altCommand = new MySqlCommand(altSql, CreateConnection());
                             altCommand.Parameters.AddWithValue("@reservationId", reader.GetInt32("id"));
                             using var altReader = altCommand.ExecuteReader();
@@ -891,7 +799,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = "UPDATE Reservations SET using_quantity = @quantity WHERE id = @id;";
+                    string sql = "e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@quantity", quantity);
@@ -914,8 +822,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"DELETE rs FROM ReservationSubstitute rs
-                                WHERE rs.reservation_id = @id AND rs.substitute_id = @alternativeId;";
+                    string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@id", reservationId);
@@ -923,7 +830,7 @@ namespace WILK.Services.Repositories
                     
                     command.ExecuteNonQuery();
 
-                    string checkSql = "SELECT COUNT(*) FROM ReservationSubstitute WHERE reservation_id = @id;";
+                    string checkSql = "e";
                     using var checkCommand = new MySqlCommand(checkSql, connection);
                     checkCommand.Parameters.AddWithValue("@id", reservationId);
                     var countObj = checkCommand.ExecuteScalar();
@@ -934,7 +841,7 @@ namespace WILK.Services.Repositories
                         return DatabaseResult<bool>.Success(true);
                     }
 
-                    string updateSql = "UPDATE Reservations SET have_alternative = 0 WHERE id = @id;";
+                    string updateSql = "e";
                     using var updateCommand = new MySqlCommand(updateSql, connection);
                     updateCommand.Parameters.AddWithValue("@id", reservationId);
                     updateCommand.ExecuteNonQuery();
@@ -959,20 +866,20 @@ namespace WILK.Services.Repositories
                     try
                     {
                         // Resolve component internal IDs
-                        var getOrigCmd = new MySqlCommand("SELECT id FROM Components WHERE r_id = @originalRId LIMIT 1;", connection, transaction);
+                        var getOrigCmd = new MySqlCommand("e", connection, transaction);
                         getOrigCmd.Parameters.AddWithValue("@originalRId", originalRId);
                         var origObj = getOrigCmd.ExecuteScalar();
                         if (origObj == null) throw new Exception("Original component not found");
                         int origCompId = Convert.ToInt32(origObj);
 
-                        var getSubCompCmd = new MySqlCommand("SELECT id FROM Components WHERE r_id = @substituteRId LIMIT 1;", connection, transaction);
+                        var getSubCompCmd = new MySqlCommand("e", connection, transaction);
                         getSubCompCmd.Parameters.AddWithValue("@substituteRId", substituteRId);
                         var subObj = getSubCompCmd.ExecuteScalar();
                         if (subObj == null) throw new Exception("Substitute component not found");
                         int subCompId = Convert.ToInt32(subObj);
 
                         // Find or create Substitute mapping
-                        var getSubstituteIdCmd = new MySqlCommand("SELECT id FROM Substitute WHERE o_id = @origCompId AND z_id = @subCompId LIMIT 1;", connection, transaction);
+                        var getSubstituteIdCmd = new MySqlCommand("e", connection, transaction);
                         getSubstituteIdCmd.Parameters.AddWithValue("@origCompId", origCompId);
                         getSubstituteIdCmd.Parameters.AddWithValue("@subCompId", subCompId);
                         var substituteIdObj = getSubstituteIdCmd.ExecuteScalar();
@@ -987,13 +894,13 @@ namespace WILK.Services.Repositories
                         }
 
                         // If a ReservationSubstitute for this reservation/substitute already exists, increment quantity; otherwise insert new row
-                        var checkCmd = new MySqlCommand("SELECT quantity FROM ReservationSubstitute WHERE reservation_id = @reservation_id AND substitute_id = @substituteId LIMIT 1;", connection, transaction);
+                        var checkCmd = new MySqlCommand("e", connection, transaction);
                         checkCmd.Parameters.AddWithValue("@reservation_id", reservation_id);
                         checkCmd.Parameters.AddWithValue("@substituteId", substituteId);
                         var existing = checkCmd.ExecuteScalar();
                         if (existing != null)
                         {
-                            var updateCmd = new MySqlCommand("UPDATE ReservationSubstitute SET quantity = quantity + @quantity WHERE reservation_id = @reservation_id AND substitute_id = @substituteId;", connection, transaction);
+                            var updateCmd = new MySqlCommand("e", connection, transaction);
                             updateCmd.Parameters.AddWithValue("@quantity", quantity);
                             updateCmd.Parameters.AddWithValue("@reservation_id", reservation_id);
                             updateCmd.Parameters.AddWithValue("@substituteId", substituteId);
@@ -1001,7 +908,7 @@ namespace WILK.Services.Repositories
                         }
                         else
                         {
-                            var insertCmd = new MySqlCommand("INSERT INTO ReservationSubstitute (substitute_id, quantity, reservation_id) VALUES (@substituteId, @quantity, @reservation_id);", connection, transaction);
+                            var insertCmd = new MySqlCommand("e", connection, transaction);
                             insertCmd.Parameters.AddWithValue("@substituteId", substituteId);
                             insertCmd.Parameters.AddWithValue("@quantity", quantity);
                             insertCmd.Parameters.AddWithValue("@reservation_id", reservation_id);
@@ -1009,7 +916,7 @@ namespace WILK.Services.Repositories
                         }
 
                         // Mark reservation as having alternative
-                        var updateResCmd = new MySqlCommand("UPDATE Reservations SET have_alternative = 1 WHERE id = @reservation_id;", connection, transaction);
+                        var updateResCmd = new MySqlCommand("e", connection, transaction);
                         updateResCmd.Parameters.AddWithValue("@reservation_id", reservation_id);
                         updateResCmd.ExecuteNonQuery();
 
@@ -1053,11 +960,7 @@ namespace WILK.Services.Repositories
                     // Process SMD lists
                     foreach(var listId in listsToProcessSMD)
                     {
-                        string listData = @"
-                            SELECt id, name, is_one_sided, done_top, done_bot, start
-                            FROM ListOfReservations
-                            WHERE id = @listId
-                            LIMIT 1;";
+                        string listData = @"e";
                         using var listCommand = new MySqlCommand(listData, connection);
                         listCommand.Parameters.AddWithValue("@listId", listId);
                         using var listReader = listCommand.ExecuteReader();
@@ -1074,21 +977,7 @@ namespace WILK.Services.Repositories
 
                         var dateUsageDict = new Dictionary<(int r_id, DateTime date), int>();
 
-                        string logData = @"
-                            SELECT rl.side,
-                                rl.date,
-                                c.r_id,
-                                r.quantity,
-                                SUM(rl.`change`) AS change_sum,
-                                SUM(rl.`change`) * r.quantity / @start AS daily_usage
-                            FROM ReservationsLogs rl
-                            JOIN ListOfReservations lor ON rl.list_id = lor.id
-                            JOIN Reservations r ON r.list_id = lor.id AND r.side = rl.side
-                            JOIN Components c ON r.components_id = c.id
-                            WHERE rl.list_id = @listId
-                            AND rl.date >= @fromDate
-                            AND (c.Type = 'SMD' OR c.Type = 'PCB')
-                            GROUP BY rl.side, rl.date, c.r_id, r.quantity;";
+                        string logData = @"e";
                         using var logCommand = new MySqlCommand(logData, connection);
                         logCommand.Parameters.AddWithValue("@listId", listId);
                         logCommand.Parameters.AddWithValue("@fromDate", fromDate);
@@ -1112,16 +1001,7 @@ namespace WILK.Services.Repositories
 
                         // Compute usage before fromDate per component (to subtract from alternative usage)
                         var usedBeforeDict = new Dictionary<int, int>();
-                        string usedBeforeSql = @"
-                            SELECT c.r_id AS r_id, SUM(rl.`change` * r.quantity) / @start AS usage_before
-                            FROM ReservationsLogs rl
-                            JOIN ListOfReservations lor ON rl.list_id = lor.id
-                            JOIN Reservations r ON r.list_id = lor.id AND r.side = rl.side
-                            JOIN Components c ON r.components_id = c.id
-                            WHERE rl.list_id = @listId
-                              AND rl.date < @fromDate
-                              AND (c.Type = 'SMD' OR c.Type = 'PCB')
-                            GROUP BY c.r_id;";
+                        string usedBeforeSql = @"e";
                         using (var usedBeforeCmd = new MySqlCommand(usedBeforeSql, connection))
                         {
                             usedBeforeCmd.Parameters.AddWithValue("@listId", listId);
@@ -1216,11 +1096,7 @@ namespace WILK.Services.Repositories
                     // Process THT lists (no sides, components type THT)
                     foreach (var listId in listsToProcessTHT)
                     {
-                        string listDataTHT = @"
-                            SELECT id, name, done, start, smd_list_id
-                            FROM ListOfReservationsTHT
-                            WHERE id = @listId
-                            LIMIT 1;";
+                        string listDataTHT = @"e";
                         using var listCommandTHT = new MySqlCommand(listDataTHT, connection);
                         listCommandTHT.Parameters.AddWithValue("@listId", listId);
                         using var listReaderTHT = listCommandTHT.ExecuteReader();
@@ -1235,19 +1111,7 @@ namespace WILK.Services.Repositories
 
                         var dateUsageDictTHT = new Dictionary<(int r_id, DateTime date), int>();
 
-                        string logDataTHT = @"
-                            SELECT rl.date,
-                                   c.r_id,
-                                   r.quantity,
-                                   SUM(rl.`change`) * r.quantity / @start AS daily_usage
-                            FROM ReservationsLogs rl
-                            JOIN ListOfReservationsTHT lor ON rl.list_id = lor.id
-                            JOIN ReservationsTHT r ON r.list_id = lor.id
-                            JOIN Components c ON r.components_id = c.id
-                            WHERE rl.list_id = @listId
-                              AND rl.date >= @fromDate
-                              AND c.Type = 'THT'
-                            GROUP BY rl.date, c.r_id, r.quantity;";
+                        string logDataTHT = @"e";
                         using var logCommandTHT = new MySqlCommand(logDataTHT, connection);
                         logCommandTHT.Parameters.AddWithValue("@listId", listId);
                         logCommandTHT.Parameters.AddWithValue("@start", startTHT);
@@ -1267,16 +1131,7 @@ namespace WILK.Services.Repositories
 
                         // Compute usage before fromDate per component (to subtract from alternative usage)
                         var usedBeforeDictTHT = new Dictionary<int, int>();
-                        string usedBeforeSqlTHT = @"
-                            SELECT c.r_id AS r_id, SUM(rl.`change` * r.quantity) / @start AS usage_before
-                            FROM ReservationsLogs rl
-                            JOIN ListOfReservationsTHT lor ON rl.list_id = lor.id
-                            JOIN ReservationsTHT r ON r.list_id = lor.id
-                            JOIN Components c ON r.components_id = c.id
-                            WHERE rl.list_id = @listId
-                              AND rl.date < @fromDate
-                              AND c.Type = 'THT'
-                            GROUP BY c.r_id;";
+                        string usedBeforeSqlTHT = @"e";
                         using (var usedBeforeCmd = new MySqlCommand(usedBeforeSqlTHT, connection))
                         {
                             usedBeforeCmd.Parameters.AddWithValue("@listId", listId);
@@ -1369,9 +1224,7 @@ namespace WILK.Services.Repositories
                         }
                     }
 
-                    var sqlUpdate =  @"
-                        UPDATE GlobalSettings SET setting_value = @lastReportDate 
-                        WHERE setting_key = 'last_report_date';";
+                    var sqlUpdate =  @"e";
 
                     using var updateCommand = new MySqlCommand(sqlUpdate, connection);
                     updateCommand.Parameters.AddWithValue("@lastReportDate", DateTime.Now);
@@ -1395,11 +1248,7 @@ namespace WILK.Services.Repositories
                     using var connection = CreateConnection();
                     string sideStr = side == IReservationRepository.Side.TOP ? "top" : side == IReservationRepository.Side.BOT ? "bot" : side == IReservationRepository.Side.SINGLE ? "SINGLE" : "THT";
                     // Get current done value
-                    string sideCheckSql = @"
-                        SELECT is_one_sided, done_" + (sideStr == "SINGLE" ? "bot" : sideStr) + @" AS current_done
-                        FROM ListOfReservations
-                        WHERE id = @id
-                        LIMIT 1;";
+                    string sideCheckSql = @"e";
 
                     using var sideCheckCommand = new MySqlCommand(sideCheckSql, connection);
                     sideCheckCommand.Parameters.AddWithValue("@id", reservationId);
@@ -1415,21 +1264,13 @@ namespace WILK.Services.Repositories
                     if(!isOneSided && side == IReservationRepository.Side.SINGLE)
                     {
                         // For one-sided lists, when updating SINGLE, we need to log both sides
-                        string logSqlTop = @"
-                            INSERT INTO ReservationsLogs (`list_id`, `side`, `change`, `date`)
-                            SELECT @reservationId, 'top', @newDone - done_top, NOW()
-                            FROM ListOfReservations
-                            WHERE id = @reservationId;";
+                        string logSqlTop = @"e";
                         using var logCommandTop = new MySqlCommand(logSqlTop, connection);
                         logCommandTop.Parameters.AddWithValue("@reservationId", reservationId);
                         logCommandTop.Parameters.AddWithValue("@newDone", newDone);
                         logCommandTop.ExecuteNonQuery();
 
-                        string logSqlBot = @"
-                            INSERT INTO ReservationsLogs (`list_id`, `side`, `change`, `date`)
-                            SELECT @reservationId, 'bot', @newDone - done_bot, NOW()
-                            FROM ListOfReservations
-                            WHERE id = @reservationId;";
+                        string logSqlBot = @"e";
                         using var logCommandBot = new MySqlCommand(logSqlBot, connection);
                         logCommandBot.Parameters.AddWithValue("@reservationId", reservationId);
                         logCommandBot.Parameters.AddWithValue("@newDone", newDone);
@@ -1462,13 +1303,7 @@ namespace WILK.Services.Repositories
 
             if(!tht)
             {
-                string sqlListsToProcess = @"
-                        SELECT DISTINCT rl.list_id 
-                        FROM ReservationsLogs rl
-                        INNER JOIN ListOfReservations lor ON rl.list_id = lor.id
-                        WHERE lor.status = @status
-                            AND side IN('top', 'bot', 'SINGLE')
-                            AND rl.date >= @fromDate;";
+                string sqlListsToProcess = @"e";
                     
                 using var commandLists = new MySqlCommand(sqlListsToProcess, connection);
                 commandLists.Parameters.AddWithValue("@status", ListStatusConstants.ZAREZERWOWANE);
@@ -1484,12 +1319,7 @@ namespace WILK.Services.Repositories
                 return listsToProcess;
             }else
             {
-                string sqlThtListsToProcess = @"
-                        SELECT DISTINCT lorth.id AS list_id
-                        FROM ReservationsLogs rl
-                        INNER JOIN ListOfReservationsTHT lorth ON lorth.id = rl.list_id
-                        WHERE side IN('THT')
-                            AND rl.date >= @fromDate;";
+                string sqlThtListsToProcess = @"e";
                     
                 using var commandLists = new MySqlCommand(sqlThtListsToProcess, connection);
                 commandLists.Parameters.AddWithValue("@status", ListStatusConstants.ZAREZERWOWANE);
@@ -1511,15 +1341,7 @@ namespace WILK.Services.Repositories
         {
             var map = new Dictionary<int, List<(int altId, int qty)>>();
             using var conn = CreateConnection();
-            string sql = @"
-                SELECT o.r_id AS original_r_id, z.r_id AS alternative_r_id, SUM(rs.quantity) AS alt_total
-                FROM ReservationSubstitute rs
-                INNER JOIN Substitute s ON rs.substitute_id = s.id
-                INNER JOIN Reservations r ON rs.reservation_id = r.id
-                INNER JOIN Components o ON s.o_id = o.id
-                INNER JOIN Components z ON s.z_id = z.id
-                WHERE r.list_id = @listId
-                GROUP BY o.r_id, z.r_id;";
+            string sql = @"e";
             using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@listId", listId);
             using var rdr = cmd.ExecuteReader();
@@ -1537,7 +1359,7 @@ namespace WILK.Services.Repositories
         private int GetOriginalTotalQuantity(int listId, int originalRId)
         {
             using var conn = CreateConnection();
-            string sql = @"SELECT COALESCE(SUM(r.using_quantity), r.quantity) FROM Reservations r JOIN Components c ON r.components_id = c.id WHERE r.list_id = @listId AND c.r_id = @r_id;";
+            string sql = @"e";
             using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@listId", listId);
             cmd.Parameters.AddWithValue("@r_id", originalRId);
@@ -1549,15 +1371,7 @@ namespace WILK.Services.Repositories
         {
             var map = new Dictionary<int, List<(int altId, int qty)>>();
             using var conn = CreateConnection();
-            string sql = @"
-                SELECT o.r_id AS original_r_id, z.r_id AS alternative_r_id, SUM(rs.quantity) AS alt_total
-                FROM ReservationSubstitute rs
-                INNER JOIN Substitute s ON rs.substitute_id = s.id
-                INNER JOIN ReservationsTHT r ON rs.reservation_id = r.id
-                INNER JOIN Components o ON s.o_id = o.id
-                INNER JOIN Components z ON s.z_id = z.id
-                WHERE r.list_id = @listId
-                GROUP BY o.r_id, z.r_id;";
+            string sql = @"e";
             using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@listId", listId);
             using var rdr = cmd.ExecuteReader();
@@ -1575,7 +1389,7 @@ namespace WILK.Services.Repositories
         private int GetOriginalTotalQuantityTHT(int listId, int originalRId)
         {
             using var conn = CreateConnection();
-            string sql = @"SELECT COALESCE(SUM(r.using_quantity), r.quantity) FROM ReservationsTHT r JOIN Components c ON r.components_id = c.id WHERE r.list_id = @listId AND c.r_id = @r_id;";
+            string sql = @"e";
             using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@listId", listId);
             cmd.Parameters.AddWithValue("@r_id", originalRId);
@@ -1587,13 +1401,7 @@ namespace WILK.Services.Repositories
         {
             var result = new List<(int, int, DateTime)>();
             using var connection = CreateConnection();
-            string sql = @"
-                SELECT component_id AS r_id,
-                    SUM(e.quantity) AS total_excessive,
-                    e.created_at
-                FROM ExcessiveUsage e
-                WHERE e.created_at >= @fromDate
-                GROUP BY component_id;";
+            string sql = @"e";
             using var command = new MySqlCommand(sql, connection);
             command.Parameters.AddWithValue("@fromDate", fromDate.Date);
             using var reader = command.ExecuteReader();
@@ -1615,7 +1423,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = "SELECT setting_value FROM GlobalSettings WHERE setting_key = 'last_report_date';";
+                    string sql = "e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     var resultObj = command.ExecuteScalar();
@@ -1640,11 +1448,7 @@ namespace WILK.Services.Repositories
                 var connection = CreateConnection();
                 try
                 {
-                    var sql = @"
-                        UPDATE ReservationSubstitute rs
-                        JOIN Substitute s ON rs.substitute_id = s.id
-                        SET rs.reservation_id =  @reservationId
-                        WHERE s.o_id = @componentId;";
+                    var sql = @"e";
                     using var command = new MySqlCommand(sql, connection);
                     foreach (var (componentId, side) in componentsToUpdate)
                     {
@@ -1689,12 +1493,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT id, `name`, start, done, last_update_done,
-                               COALESCE(createdAt, NOW()) as created_at, realizeFlag, maxEndDate, assignedPerson, destination, package
-                        FROM ListOfReservationsTHT 
-                        WHERE status = @status 
-                        ORDER BY id DESC;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@status", ListStatusConstants.ZAREZERWOWANE);
@@ -1718,10 +1517,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        UPDATE ListOfReservationsTHT
-                        SET done = @newQuantity
-                        WHERE id = @reservationId;";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@newQuantity", newQuantity);
@@ -1743,11 +1539,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        SELECT done, start
-                        FROM ListOfReservationsTHT
-                        WHERE id = @reservationId
-                        LIMIT 1;";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@reservationId", reservationId);
@@ -1777,10 +1569,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        SELECT id, name, start, updatedAt, createdAt, maxEndDate, assignedPerson, destination, transferred
-                        FROM ListOfReservationsTHT
-                        WHERE status = @status;";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@status", ListStatusConstants.ZREALIZOWANESMT);
@@ -1803,10 +1592,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        SELECT reel_id, box, quantity 
-                        FROM TraceTHT
-                        WHERE list_id = @listId;";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@listId", list_id);
@@ -1829,10 +1615,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        UPDATE ListOfReservationsTHT
-                        SET status = @status, updatedAt = NOW()
-                        WHERE id = @reservationId;";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@status", ListStatusConstants.THT_COMPLETED);
@@ -1854,10 +1637,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        SELECT id, name, start, createdAt
-                        FROM ListOfAdditionalMaterials
-                        WHERE status = @status;";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@status", ListStatusConstants.ZAREZERWOWANE);
@@ -1880,9 +1660,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        INSERT INTO TraceAdditionalMaterials (list_id, reel_id, box, quantity)
-                        VALUES (@listId, @reelId, @box, @quantity);";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@listId", listId);
@@ -1906,10 +1684,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        SELECT reel_id, box, quantity 
-                        FROM TraceAdditionalMaterials
-                        WHERE list_id = @listId;";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@listId", list_id);
@@ -1932,10 +1707,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        SELECT c.r_id, r.quantity, c.name
-                        FROM ReservationsAdditionalMaterials r JOIN Components c ON r.components_id = c.id
-                        WHERE list_id = @listId;";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@listId", listId);
@@ -1958,9 +1730,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        INSERT INTO ReservationsAdditionalMaterials (list_id, components_id, quantity)
-                        VALUES (@listId, @componentId, @quantity);";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@listId", listId);
@@ -1983,10 +1753,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        UPDATE ListOfAdditionalMaterials
-                        SET status = @status, updatedAt = NOW()
-                        WHERE id = @listId;";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@status", ListStatusConstants.ZREALIZOWANESMT);
@@ -2008,10 +1775,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        UPDATE ListOfReservationsTHT
-                        SET transferred = @transferred, updatedAt = NOW()
-                        WHERE id = @listId;";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@transferred", transferred);
@@ -2033,10 +1797,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        INSERT INTO ListOfAdditionalMaterials (name, status, createdAt, start)
-                        VALUES (@name, @status, NOW(), @start);
-                        SELECT LAST_INSERT_ID();";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@name", name);
@@ -2060,9 +1821,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        INSERT INTO ReservationsAdditionalMaterials (list_id, components_id, quantity)
-                        VALUES (@listId, @componentId, @quantity);";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     foreach (var (componentId, quantity) in materials)
@@ -2089,12 +1848,12 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sqlDeleteReservations = @"DELETE FROM ReservationsAdditionalMaterials WHERE list_id = @listId;";
+                    string sqlDeleteReservations = @"e";
                     using var commandDeleteReservations = new MySqlCommand(sqlDeleteReservations, connection);
                     commandDeleteReservations.Parameters.AddWithValue("@listId", listId);
                     commandDeleteReservations.ExecuteNonQuery();
 
-                    string sqlDeleteList = @"DELETE FROM ListOfAdditionalMaterials WHERE id = @listId;";
+                    string sqlDeleteList = @"e";
                     using var commandDeleteList = new MySqlCommand(sqlDeleteList, connection);
                     commandDeleteList.Parameters.AddWithValue("@listId", listId);
                     commandDeleteList.ExecuteNonQuery();
@@ -2115,7 +1874,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = "SELECT realizeFlag, assignedPerson FROM ListOfReservationsTHT WHERE id = @listId LIMIT 1;";
+                    string sql = "e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@listId", listId);
@@ -2145,10 +1904,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"SELECT `done`, `start` 
-                                        FROM ListOfReservationsTHT 
-                                        WHERE id = @id 
-                                        LIMIT 1;";
+                    const string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@id", reservationId);
@@ -2177,10 +1933,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"
-                        SELECT id_reel, box, quantity
-                        FROM draftTHT WHERE id_listOfReservationsTHT = @listId
-                        ORDER BY id DESC;";
+                    string sql = @"e";
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@listId", listId);
                     using var adapter = new MySqlDataAdapter(command);
@@ -2205,9 +1958,7 @@ namespace WILK.Services.Repositories
                     using var connection = CreateConnection();
                     using var transaction = connection.BeginTransaction();
 
-                    string sql = @"
-                        INSERT INTO TraceTHT (reel_id, box, quantity, list_id)
-                        VALUES (@reelId, @box, @used, @listId);";
+                    string sql = @"e";
 
                     using var command = new MySqlCommand(sql, connection, transaction);
                     foreach (var (reelId, box, used) in data)
@@ -2239,23 +1990,14 @@ namespace WILK.Services.Repositories
                     using var connection = CreateConnection();
                     
                     // Get current 'done' value to store as last update
-                    string selectSql = @"SELECT done
-                                            FROM ListOfReservationsTHT 
-                                            WHERE id = @id;";
+                    string selectSql = @"e";
 
                     using var selectCommand = new MySqlCommand(selectSql, connection);
                     selectCommand.Parameters.AddWithValue("@id", reservationId);
                     var currentDone = selectCommand.ExecuteScalar();
 
                     // Update progress and auto-complete when done >= start
-                    string updateSql = @"UPDATE ListOfReservationsTHT 
-                                            SET done = @newDone, last_update_done = @lastUpdate, status = 
-                                                CASE 
-                                                    WHEN @newDone >= start THEN @completedStatus 
-                                                    ELSE status 
-                                                END,
-                                                updatedAt = NOW()
-                                            WHERE id = @id;";
+                    string updateSql = @"e";
 
                     using var updateCommand = new MySqlCommand(updateSql, connection);
                     updateCommand.Parameters.AddWithValue("@id", reservationId);
@@ -2266,8 +2008,7 @@ namespace WILK.Services.Repositories
                     updateCommand.ExecuteNonQuery();
 
                     // Use escaped column names and include a timestamp for consistency with other log inserts
-                    string log = @"INSERT INTO ReservationsLogs (`list_id`, `side`, `change`, `date`) 
-                                   VALUES (@id, @side, @newDone, NOW());";
+                    string log = @"e";
                     using var logCommand = new MySqlCommand(log, connection);
                     logCommand.Parameters.AddWithValue("@id", reservationId);
                     logCommand.Parameters.AddWithValue("@newDone", newDone - int.Parse(currentDone.ToString() ?? "0"));
@@ -2293,14 +2034,12 @@ namespace WILK.Services.Repositories
                     using var connection = CreateConnection();
                     using var transaction = connection.BeginTransaction();
 
-                    string deleteSql = "DELETE FROM draftTHT WHERE id_listOfReservationsTHT = @listId;";
+                    string deleteSql = "e";
                     using var deleteCommand = new MySqlCommand(deleteSql, connection, transaction);
                     deleteCommand.Parameters.AddWithValue("@listId", listId);
                     deleteCommand.ExecuteNonQuery();
 
-                    string insertSql = @"
-                        INSERT INTO draftTHT (id_reel, box, quantity, id_listOfReservationsTHT)
-                        VALUES (@id_reel, @box, @quantity, @listId);";
+                    string insertSql = @"e";
                     using var insertCommand = new MySqlCommand(insertSql, connection, transaction);
 
                     foreach (DataRow row in draftTable.Rows)
@@ -2367,7 +2106,7 @@ namespace WILK.Services.Repositories
                     if (updates.Count == 0)
                         return DatabaseResult<bool>.Success(true);
 
-                    string sql = $"UPDATE ListOfReservationsTHT SET {string.Join(", ", updates)}, updatedAt = NOW() WHERE id = @id;";
+                    string sql = $"e";
                     command.CommandText = sql;
                     command.Parameters.AddWithValue("@id", reservationId);
 
@@ -2390,9 +2129,7 @@ namespace WILK.Services.Repositories
                 {
                     using var connection = CreateConnection();
 
-                    string sql = $@"UPDATE ListOfReservationsTHT 
-                                        SET done = last_update_done, updatedAt = NOW()
-                                        WHERE id = @id;";
+                    string sql = $@"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@id", reservationId);

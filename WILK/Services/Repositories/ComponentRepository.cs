@@ -82,10 +82,7 @@ namespace WILK.Services.Repositories
                                         command.Parameters.AddWithValue($"@quantity{i}", batch[i].Item2);
                                     }
 
-                                    command.CommandText = $@"
-                                    INSERT INTO Components (r_id, quantity)
-                                    VALUES {string.Join(", ", valueParams)}
-                                    ON DUPLICATE KEY UPDATE quantity = VALUES(quantity);";
+                                    command.CommandText = $@"e";
 
                                     command.ExecuteNonQuery();
                                 }
@@ -114,10 +111,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    using var command = new MySqlCommand(@"SELECT name 
-                                                        FROM Components 
-                                                        WHERE r_id = @r_id 
-                                                        LIMIT 1", connection);
+                    using var command = new MySqlCommand(@"e", connection);
 
                     command.Parameters.AddWithValue("@r_id", rId);
 
@@ -145,10 +139,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    using var command = new MySqlCommand(@"SELECT id 
-                                                        FROM Components 
-                                                        WHERE r_id = @r_id 
-                                                        LIMIT 1", connection);
+                    using var command = new MySqlCommand(@"e", connection);
 
                     command.Parameters.AddWithValue("@r_id", rId);
 
@@ -173,10 +164,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    using var command = new MySqlCommand(@"SELECT type 
-                                                        FROM Components 
-                                                        WHERE id = @id
-                                                        LIMIT 1", connection);
+                    using var command = new MySqlCommand(@"e", connection);
 
 
                     command.Parameters.AddWithValue("@id", componentId);
@@ -244,7 +232,7 @@ namespace WILK.Services.Repositories
                 {
                     using var connection = CreateConnection();
                     
-                    using (var checkCmd = new MySqlCommand("SELECT COUNT(*) FROM Components WHERE r_id = @id", connection))
+                    using (var checkCmd = new MySqlCommand("e", connection))
                     {
                         checkCmd.Parameters.AddWithValue("@id", id);
                         if (Convert.ToInt64(checkCmd.ExecuteScalar()) > 0)
@@ -275,7 +263,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = "UPDATE Components SET name = @name, type = @type WHERE r_id = @id";
+                    string sql = "e";
                     using (var command = new MySqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@id", id);

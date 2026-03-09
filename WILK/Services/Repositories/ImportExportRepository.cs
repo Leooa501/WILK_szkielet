@@ -46,10 +46,7 @@ namespace WILK.Services.Repositories
                     using var connection = CreateConnection();
                     var value = $"{fileName}|{DateTime.Now:yyyy-MM-dd HH:mm:ss}";
                     
-                    const string sql = @"
-                        INSERT INTO GlobalSettings (setting_key, setting_value)
-                        VALUES ('StanMagazynowy', @value)
-                        ON DUPLICATE KEY UPDATE setting_value = @value;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@value", value);
@@ -69,11 +66,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT setting_value 
-                        FROM GlobalSettings 
-                        WHERE setting_key = 'StanMagazynowy' 
-                        LIMIT 1;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     var res = command.ExecuteScalar();
@@ -105,9 +98,7 @@ namespace WILK.Services.Repositories
                     
                     try
                     {
-                        const string saveFileNameSql = @"
-                            INSERT INTO SideFile (file_name, list_id, type)
-                            VALUES (@fileName, @listId, @type);";
+                        const string saveFileNameSql = @"e";
                         
                         string safeFileName = (fileName ?? string.Empty).Trim();
                         if (safeFileName.Length > 50) safeFileName = safeFileName.Substring(safeFileName.Length - 50);
@@ -119,9 +110,7 @@ namespace WILK.Services.Repositories
                             cmd.Parameters.AddWithValue("@type", type);
                             cmd.ExecuteNonQuery();
                         }
-                        const string insertDataSql = @"
-                            INSERT INTO SidePcb (r_id, type, quantity, list_id)
-                            VALUES (@rId, @type, @quantity, @listId);";
+                        const string insertDataSql = @"e";
                         
                         foreach (var (rId, quantity) in data)
                         {
@@ -155,11 +144,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT file_name 
-                        FROM SideFile 
-                        WHERE list_id = @listId AND type = @type 
-                        LIMIT 1;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@listId", listId);
@@ -183,11 +168,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT type 
-                        FROM SidePcb 
-                        WHERE r_id = @rId 
-                            AND list_id = @listId;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@rId", rId);
@@ -217,11 +198,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT type, quantity 
-                        FROM SidePcb 
-                        WHERE r_id = @rId 
-                            AND list_id = @listId;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@rId", rId);

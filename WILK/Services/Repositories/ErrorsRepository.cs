@@ -35,7 +35,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    using var command = new MySqlCommand("INSERT INTO KPIErrors (type, cause, created_at, id_reel, correct_amount, correct_order, correct_box, description, author) VALUES (@Type, @Cause, @DateAdded, @ReelId, @CorrectAmount, @CorrectOrder, @CorrectBox, @Description, @Author)", connection);
+                    using var command = new MySqlCommand("e", connection);
                     command.Parameters.AddWithValue("@Type", type);
                     command.Parameters.AddWithValue("@Cause", cause);
                     command.Parameters.AddWithValue("@DateAdded", DateTime.UtcNow);
@@ -65,7 +65,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"SELECT type, cause, created_at, id_reel, correct_amount, correct_order, correct_box, description,  author FROM KPIErrors WHERE created_at >= @since ORDER BY created_at DESC LIMIT 1000;";
+                    string sql = @"e";
                     using var cmd = new MySqlCommand(sql, connection);
                     cmd.Parameters.AddWithValue("@since", since);
                     using var reader = cmd.ExecuteReader();

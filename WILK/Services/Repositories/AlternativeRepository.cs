@@ -44,11 +44,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT c.id, c.r_id AS RId, c.name AS Name, c.type AS Type, c.quantity AS Quantity
-                        FROM Substitute a
-                        JOIN Components c ON c.id = a.z_id
-                        WHERE a.o_id = @originalComponentId;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@originalComponentId", originalComponentId);
@@ -84,12 +80,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT a.id, c1.r_id AS o_id, c1.name AS o_name, c2.r_id AS z_id, c2.name AS z_name
-                        FROM Substitute a
-                        LEFT JOIN Components c1 ON c1.id = a.o_id
-                        LEFT JOIN Components c2 ON c2.id = a.z_id
-                        ORDER BY a.id DESC;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     using var adapter = new MySqlDataAdapter(command);
@@ -111,12 +102,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        INSERT INTO Substitute (o_id, z_id)
-                        VALUES (
-                            (SELECT id FROM Components WHERE r_id = @originalRId LIMIT 1),
-                            (SELECT id FROM Components WHERE r_id = @substituteRId LIMIT 1)
-                        );";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@originalRId", originalRId);
@@ -137,7 +123,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = "DELETE FROM Substitute WHERE id = @id;";
+                    const string sql = "e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@id", alternativeId);
@@ -161,18 +147,13 @@ namespace WILK.Services.Repositories
                     
                     try
                     {
-                        const string deleteSql = "DELETE FROM Substitute;";
+                        const string deleteSql = "e";
                         using (var deleteCmd = new MySqlCommand(deleteSql, connection, transaction))
                         {
                             deleteCmd.ExecuteNonQuery();
                         }
                         
-                        const string sql = @"
-                            INSERT INTO Substitute (o_id, z_id)
-                            VALUES (
-                                (SELECT id FROM Components WHERE r_id = @originalRId LIMIT 1),
-                                (SELECT id FROM Components WHERE r_id = @substituteRId LIMIT 1)
-                            );";
+                        const string sql = @"e";
                         
                         foreach (var (kol1, kol2) in altList)
                         {

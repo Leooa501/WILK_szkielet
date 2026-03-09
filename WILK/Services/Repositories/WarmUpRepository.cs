@@ -38,11 +38,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT w.id, c.r_id, c.name 
-                        FROM WarmUp w 
-                        LEFT JOIN Components c ON c.id = w.c_id
-                        ORDER BY w.id DESC;";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     using var adapter = new MySqlDataAdapter(command);
@@ -64,9 +60,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        INSERT INTO WarmUp (c_id)
-                        VALUES ((SELECT id FROM Components WHERE r_id = @rId LIMIT 1));";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@rId", rId);
@@ -86,7 +80,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = "DELETE FROM WarmUp WHERE id = @id;";
+                    const string sql = "e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@id", warmUpId);
@@ -106,10 +100,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    const string sql = @"
-                        SELECT COUNT(*) 
-                        FROM WarmUp 
-                        WHERE c_id = (SELECT id FROM Components WHERE r_id = @rId LIMIT 1);";
+                    const string sql = @"e";
                     
                     using var command = new MySqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@rId", rId);

@@ -36,7 +36,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    using var command = new MySqlCommand("INSERT INTO ExcessiveUsage (component_id, quantity, reason, reel_id, created_at) VALUES (@ProductId, @Quantity, @Reason, @ReelId, @DateAdded)", connection);
+                    using var command = new MySqlCommand("e", connection);
                     command.Parameters.AddWithValue("@ProductId", productId);
                     command.Parameters.AddWithValue("@Quantity", quantity);
                     command.Parameters.AddWithValue("@Reason", reason);
@@ -62,7 +62,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    string sql = @"SELECT id, component_id, quantity, reason, reel_id, created_at FROM ExcessiveUsage WHERE created_at >= @since ORDER BY created_at DESC LIMIT 1000;";
+                    string sql = @"e";
                     using var cmd = new MySqlCommand(sql, connection);
                     cmd.Parameters.AddWithValue("@since", since);
                     using var reader = cmd.ExecuteReader();
@@ -101,7 +101,7 @@ namespace WILK.Services.Repositories
                 try
                 {
                     using var connection = CreateConnection();
-                    using var command = new MySqlCommand("DELETE FROM ExcessiveUsage WHERE id = @Id", connection);
+                    using var command = new MySqlCommand("e", connection);
                     command.Parameters.AddWithValue("@Id", id);
 
                     command.ExecuteNonQuery();
