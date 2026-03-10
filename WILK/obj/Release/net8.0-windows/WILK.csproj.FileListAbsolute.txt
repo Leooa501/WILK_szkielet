@@ -162,3 +162,7 @@ C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Release\net8.0-windows\refi
 C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Release\net8.0-windows\WILK.pdb
 C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Release\net8.0-windows\WILK.genruntimeconfig.cache
 C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Release\net8.0-windows\ref\WILK.dll
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Release\net8.0-windows\WILK.dll.manifest
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\bin\Release\net8.0-windows\WILK.application
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Release\net8.0-windows\WILK.dll.manifest
+C:\Users\leons\Desktop\gitDow\WILK_szkielet\WILK\obj\Release\net8.0-windows\WILK.application
