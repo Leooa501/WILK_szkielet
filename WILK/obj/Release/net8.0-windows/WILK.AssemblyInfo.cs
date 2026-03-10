@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WILK")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57bc02ae5758fac0450f16e40bc4724a2c039522")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16450848691807a0261ee8ed08c7683c510de03d")]
 [assembly: System.Reflection.AssemblyProductAttribute("WILK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WILK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
