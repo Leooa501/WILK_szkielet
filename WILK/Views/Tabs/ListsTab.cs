@@ -341,7 +341,7 @@ namespace WILK.Views.Tabs
                 Name = "listy SMD",
                 Padding = new Padding(0),
                 TabIndex = 0,
-                Text = "SMD",
+                Text = "eSeMDe",
                 UseVisualStyleBackColor = true,
             };
 
@@ -372,7 +372,7 @@ namespace WILK.Views.Tabs
                 Name = "listy THT",
                 Padding = new Padding(0),
                 TabIndex = 2,
-                Text = "THT",
+                Text = "TeHaTe",
                 UseVisualStyleBackColor = true
             };
 
