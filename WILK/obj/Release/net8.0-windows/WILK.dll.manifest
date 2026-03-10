@@ -564,7 +564,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>GH/a21F8TMbKU1exehnP+WrsqIfC/25k9LlHXuDp2yA=</dsig:DigestValue>
+      <dsig:DigestValue>W1qXEHtsrDFVbIO06vR0eFW79KjyF0oVhKqQ6YQT4xc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="WILK.exe" size="180672">
@@ -573,7 +573,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>xsisc8TturLJ8rR3hvNpjH+iOR77zELjuMoxsmJC/lc=</dsig:DigestValue>
+      <dsig:DigestValue>BVYOqgRqnQqTHKPnYFsNfuc+cS0hDApXyuH5i0AhEqI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="WILK.runtimeconfig.json" size="496">
