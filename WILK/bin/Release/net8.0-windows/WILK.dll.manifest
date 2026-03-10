@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="WILK.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="WILK.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="Resources\Icons\wolf_256x256.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -558,22 +558,22 @@
       <dsig:DigestValue>787pYfNB4jqpBLWght1Gz7lCa3n9y0a7I2c5dFLXj4U=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="WILK.dll" size="517568">
+  <file name="WILK.dll" size="517056">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Ulxa3+KHFuMYSX7EwYXDiTX6OSxsdLNnr9lI8kD+1F4=</dsig:DigestValue>
+      <dsig:DigestValue>2AllQeoO7mM0XNZjGmVzV1/tUC7F62iT5G9nHvdC2oQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="WILK.exe" size="181184">
+  <file name="WILK.exe" size="180672">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>EIHNxcUnWS1432nZsiV7+FSwZtf+pXC0eJgWHe4Bx3M=</dsig:DigestValue>
+      <dsig:DigestValue>GJeQ3hFyK5ZGUIzG0Ruswv6FUCOUKy9dGz7BsXd1aVM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="WILK.runtimeconfig.json" size="496">
