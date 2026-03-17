@@ -341,7 +341,7 @@ namespace WILK.Views.Tabs
                 Name = "listy SMD",
                 Padding = new Padding(0),
                 TabIndex = 0,
-                Text = "eSeMDe",
+                Text = "Pozdrawiam",
                 UseVisualStyleBackColor = true,
             };
 
@@ -372,7 +372,7 @@ namespace WILK.Views.Tabs
                 Name = "listy THT",
                 Padding = new Padding(0),
                 TabIndex = 2,
-                Text = "TeHaTe",
+                Text = "Krystiana",
                 UseVisualStyleBackColor = true
             };
 
@@ -404,7 +404,7 @@ namespace WILK.Views.Tabs
                 Name = "singleComps",
                 Padding = new Padding(0),
                 TabIndex = 1,
-                Text = "Rezerwacje komponentów",
+                Text = "zoptymalizuj",
                 UseVisualStyleBackColor = true
             };
 
@@ -436,7 +436,7 @@ namespace WILK.Views.Tabs
                 Name = "additionalMaterials",
                 Padding = new Padding(0),
                 TabIndex = 3,
-                Text = "materiały dodatkowe",
+                Text = "me",
                 UseVisualStyleBackColor = true
             };
 
