@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="WILK.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="WILK.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="Resources\Icons\wolf_256x256.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -564,7 +564,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Nu31WBLJGWcpDTJ/+Uu4Tjilecqa1tdpcqdZ4GH6qrs=</dsig:DigestValue>
+      <dsig:DigestValue>Ob4Wk7ugXclUf6OjQYR901qCTa+fa8gDEWATOi80T6M=</dsig:DigestValue>
     </hash>
   </file>
   <file name="WILK.exe" size="180672">
@@ -573,7 +573,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YvVr6uzPW6MMeBpVSFs2A1nbCZdwW6OOh04UqxOF65Y=</dsig:DigestValue>
+      <dsig:DigestValue>pay00rNu5rxeM5jpfuK0RmDy0xFxwAhTRW5FNTL0WG0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="WILK.runtimeconfig.json" size="496">
