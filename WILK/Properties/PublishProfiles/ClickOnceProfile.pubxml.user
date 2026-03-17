@@ -2,7 +2,11 @@
 <!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
 <Project>
   <PropertyGroup>
+<<<<<<< HEAD
     <History>True|2026-03-17T11:11:11.3321188Z||;</History>
+=======
+    <History>True|2026-03-11T08:26:52.5588694Z||;True|2026-03-10T13:55:12.6623111+01:00||;</History>
+>>>>>>> 971b21c88e250e9031f9d9cce254a8659aa8a088
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
